@@ -1,0 +1,19 @@
+
+
+// style overwrite as the logo is too long to fit the green button on iPhone 5
+.logo-2 img {
+    max-height: 70px;
+}
+
+
+//shrunk the font size on the mobile menu pop-up nav, was a bit big and the back button didn't fit on page
+.mm-listview>li>a {
+    font-size: 32px;
+    line-height: 1.5em;
+   
+    @media screen and (max-width: 600px) {
+        font-size: 21px;
+        line-height: 1.5em;
+    }
+    
+}

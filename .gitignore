@@ -1,0 +1,9 @@
+node_modules
+inc
+.sass-cache
+img
+uploads
+.DS_Store
+*.pdf
+*.zip
+

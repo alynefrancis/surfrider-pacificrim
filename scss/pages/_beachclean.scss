@@ -1,0 +1,105 @@
+
+//For both trash_trends.php and single-beach_clean.php
+
+
+/***************
+ TRASH TRENDS 
+****************/
+
+.trash-trends {
+	text-align: center;
+	    padding-top: 20px;
+		padding-bottom: 20px;
+	
+		@media screen and (min-width: 768px){
+	        padding-top: 30px;
+			padding-bottom: 30px;
+	    }
+
+    .trash-trend-item {
+    	padding: 10px;
+
+    	@media screen and (max-width: 768px){
+            height: 160px;
+        }
+
+    	.trash-trend-icon img {
+    		max-height: 40px;
+    		width: auto;
+
+    			 @media screen and (min-width: 768px){
+    		        max-height: 50px;
+
+    		    }
+    	    	 @media screen and (min-width: 1100 px){
+    	            max-height: 60px;
+
+    	        }
+    	    	 @media screen and (min-width: 1600px){
+    	            max-height: 70px;
+    	        }
+    	}
+
+    	.trash-trend-info {
+    		height: auto;
+
+    		h2 {
+    			font-size: 1.7em;
+    			padding: 10px;
+    			padding-bottom: 2px;
+    			@media screen and (max-width: 600px){
+    		        font-size: 15px;
+    		    }
+
+    			@media screen and (max-width: 768px){
+    		        font-size: 24px;
+    		    }		
+    	}
+    			
+    		h6 {
+    			font-size: 14px;
+    			padding: 5px;
+    			text-transform: none;
+
+    			@media screen and (max-width: 600px){
+    			    font-size: 12px;
+    			}
+    		}
+    		.btn {
+    			padding: 0.5rem;
+    			font-size: 13px;
+    			margin-top: 5px;
+    		}
+    	}
+    }
+}
+
+/***************
+ PAST TRASH TRENDS
+****************/
+
+.trash-summary {
+	padding-bottom: 20px;
+	padding-top: 20px;
+		 @media screen and (min-width: 768px){
+	        padding-bottom: 50px;
+	    }
+	h6.trend-title {
+			font-size: 2rem;
+			padding-bottom: 20px;
+		}
+}
+
+.trash-trend-item.small {
+		@media screen and (max-width: 768px){
+	        height: 70px;
+	    }
+}
+
+
+
+//From only single-beach_clean.php
+.single-beach-trend  {
+	margin-bottom: 30px;
+	text-align: center;
+}

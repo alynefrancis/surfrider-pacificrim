@@ -1,0 +1,162 @@
+
+//section containing the four icons and challenges 
+
+.under-seige-text {
+     @media all and (min-width: 768px) { 
+            text-align: center;
+            
+        }       
+}
+
+.four-challenges {
+    padding: 20px;
+
+    @media all and (min-width: 768px) { 
+           padding-bottom: 0;
+           
+    } 
+
+    p {
+        font-size: 16px;
+    }
+
+    img {
+        height: 100px;
+
+        @media all and (max-width: 1400px) { 
+            width: auto;
+            height: 90px;
+            margin-top: 5%;          
+        } 
+
+        @media all and (max-width: 1000px) { 
+            width: 60%;
+            height: auto;         
+        }
+        @media all and (max-width: 600px) { 
+            width: 50%;
+            height: auto;       
+        }         
+    }
+
+    .four-challenges-title {
+        height: 65px;
+    }
+
+    h4 {
+        font-size: 1.5em;
+
+        @media all and (max-width: 768px) { 
+            font-size: 1em;
+        }
+        @media all and (max-width: 1100px) { 
+            font-size: 1.2em;
+        }
+    }
+}
+
+.four-challenges p {
+    @media all and (max-width: 767px) { 
+            display: none
+        }
+}
+
+//the our solution section height
+
+.our-solution {
+    height: 800px;
+
+    @media all and (min-width: 1300px) { 
+        // height: 1400px;
+    }
+
+    &.panel {
+
+        background-position: 76% top;
+
+    }   
+}
+
+
+//bottom panel height - changed padding to keep centered
+
+
+.donate-panel {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+.bottom-panel-text {
+    // margin-top: 80px;
+}
+
+.top-panel {
+    
+    @media screen and (max-width: 768px) {
+
+          padding-top: 50px;
+    }
+
+}
+   
+
+//increased the padding to show more of the second image on the why surfrider page
+.bottom-panel {
+
+    @media screen and (min-width: 992px) {
+        padding-top: 80%;
+    }
+
+    @media screen and (min-width: 1400px) {
+        padding-top: 70%;
+    }
+
+    @media screen and (min-width: 1600px) {
+        padding-top: 65%;
+    }
+}
+
+
+#why-surfrider-top {
+    min-height: 860px;
+  
+    @media screen and (min-width: 1600px) {
+        min-height: 1300px;
+        padding-top: 100px;
+
+    }
+    p {
+        hyphens: auto;
+    }
+}
+
+#why-surfrider-bottom {
+    text-align: center;
+
+    p {
+        hyphens: auto;
+    }
+}
+
+
+.why-surfrider-images {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+
+    .photo-credit {
+        position: absolute;
+        bottom: 0px;
+        right: 10px;
+        z-index: 100;
+        color: white;
+        margin: 0;
+        font-size: 12px;
+
+        @media screen and (max-width: 767px) {
+            font-size: 10px;
+        }
+    }
+
+}

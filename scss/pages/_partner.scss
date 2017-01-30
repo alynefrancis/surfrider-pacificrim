@@ -1,0 +1,97 @@
+
+//"center hack" used to make sure that logos are always centered horizontally and vertically in div
+
+.partner {
+    height: 60px;    
+    margin-bottom: 50px;
+
+    @media screen and (min-width: 300px) {
+        margin-bottom: 50px;
+        height: 60px;
+    }
+    @media screen and (min-width: 400px) {
+        margin-bottom: 50px;
+        height: 75px;
+    }
+    @media screen and (min-width: 768px) {
+        margin-bottom: 30px;
+        height: 55px;
+    }
+    @media screen and (min-width: 900px) {
+        margin-bottom: 50px;
+        height: 90px;
+    }
+    @media screen and (min-width: 1100px) {
+        height: 100px;
+    }
+
+    @media screen and (min-width: 1300px) {
+        height: 110px;
+    }
+
+        a {
+            color: black;
+        }
+
+        h6 {
+          text-align: center;
+        }
+
+        .partner-logo {
+            height: 100%;
+            position: relative;
+
+            img {
+               max-height: 100%;
+               width: auto;
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%, -50%);
+
+               @media screen and (max-width: 768px) {
+                    max-width: 65%;
+               }
+
+               @media screen and (max-width: 600px) {
+                    max-width: 100%;
+               }
+            }
+        }
+
+}
+
+.panel.photographer-credits {
+  padding-top: 0;
+}
+
+.photography-intro {
+    padding-bottom: 20px;
+    // padding-top: 2%;
+
+    @media screen and (max-width: 768px) {
+        padding: 5%;
+        // padding-top: 2%;
+    }
+}
+
+.photographer {
+  text-align: center;
+  padding: 2%;
+  vertical-align: center;
+
+    @media screen and (max-width: 768px) {
+        padding: 2%;
+        padding-bottom: 50px;
+    }
+
+  .photog-logo img {
+    max-height: 120px;
+    width: auto;
+
+    @media screen and (max-width: 768px) {
+         max-height: 70px;
+    }
+  }
+}
+

@@ -1,0 +1,159 @@
+
+.front-intro {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    h2 {
+        @media screen and (max-width: 600px){
+            font-size: 18px;
+        }
+
+    }    
+   
+}
+
+// the what we do section
+ .what-we-do {
+    background-color: lightgrey;
+ }
+
+
+//reduce scale of hover was too dramatic
+.row-reveal-item:hover {   
+        transform: scale(1);
+ }
+
+.row-reveal-item .row-reveal-overlay {
+    opacity: 0.8;
+
+}
+
+//was too small on mobile
+.row-reveal-item .row-reveal-wrap-text h6 {
+    @media screen and (max-width: 768px){
+        font-size: 2.7rem;
+    }
+}
+
+//changed padding on iPad and smaller size 
+.row-reveal-item {
+    @media screen and (max-width: 768px){
+        padding: 6rem 4rem;
+    }
+}
+
+ // who are we section:
+ // added a duplicate div so that on mobile the text is below the video 
+ // and can be seen in contrast to the dark wave    
+@media screen and (max-width: 767px){
+    #who-big {
+        display: none;
+    }
+
+    #who-small h4 {
+        color: $surfrider-blue; 
+    }
+}   
+
+@media all and (min-width: 768px) { 
+    #who-small {
+        display: none; 
+    }
+}
+
+
+//this title was sitting too close to text. added bottom margin
+.who-we-are h5,
+.making-difference h5 {
+    margin-bottom: 15px;
+}
+
+
+//front-page for the latest blog post -shrunk the margin so they arent so spaced out on mobile
+@media screen and (max-width: 767px) {
+    .media-block.flex {
+        flex: 0 0 100%;
+        margin: 1em 0;
+        padding: 0 0.5em;
+
+        .p3 {
+            font-size: 1.8rem;
+        }
+        .media-block-text {
+            font-size: 2rem;
+        }
+    }
+
+}  
+
+
+//increased the padding on top/bottom for this panel. 
+//Hooked both classes and did this rather than height so that its still centered
+.panel.who-we-are {
+    padding-top: 120px;
+    padding-bottom: 120px; 
+
+    @media screen and (max-width: 768px){
+        padding-bottom: 40px; 
+    }
+    @media screen and (min-width: 1100px){
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    @media screen and (min-width: 1300px){
+        padding-top: 140px;
+        padding-bottom: 140pxpx; 
+    }
+    @media screen and (min-width: 1600px){
+        padding-top: 180px;
+        padding-bottom: 180px; 
+    }
+}
+
+//positioning for photo credit
+.what-we-found {
+    position: relative;
+    z-index: 1;
+
+    p.photo-credit {
+        position: absolute;
+        bottom: 0px;
+        right: 10px;
+        z-index: 100;
+        color: white;
+        margin: 0;
+        font-size: 13px;
+    }
+
+    &.panel {
+
+        background-position: 92% bottom;
+
+    }
+
+}
+
+#coastal-factoids {
+    background-color: #DCDCDC;
+    min-height: 200px;
+    height: auto;
+    text-align: center;
+
+    h5 {
+        margin-bottom: 30px;
+    }
+
+    @media screen and (max-width: 600px) {
+        text-align: center;
+    }
+}
+
+//extra padding to push little play button down on large screen
+.front-vid-container {
+
+    @media screen and (min-width: 768px) {
+        padding-top: 5%;
+    }
+}

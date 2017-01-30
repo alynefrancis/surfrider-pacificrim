@@ -1,0 +1,40 @@
+/*!
+Theme Name: Surfrider Chapter Child
+Theme URI: https://pacificrim.surfrider.org
+Author: Alyne Francis
+Author URI: http://coldwaterwebdesign.com
+Description: Custom WordPress theme for the Surfrider Pacific Rim Chapter
+Version: 1.0
+License: The MIT License (MIT)
+License URI: http://opensource.org/licenses/MIT
+Text Domain: surfrider-chapter-child
+Template: surfrider-chapter
+*/
+
+
+//@import 'core/_normalize.scss';
+
+
+//Defining
+@import 'core/_variables.scss';
+
+//Global Styles
+@import '_base.scss';
+
+
+//Main Components
+@import 'pages/_frontpage.scss';
+@import 'parts/_header.scss';
+@import 'parts/_footer.scss';
+@import 'pages/_partner.scss';
+@import 'pages/_whysurfrider.scss';
+@import 'pages/_volunteer.scss';
+@import 'pages/_newsletter.scss';
+@import 'pages/_videos.scss';
+@import 'pages/_campaigns.scss';
+@import 'parts/_gallery.scss';
+@import 'pages/_crew.scss';
+@import 'pages/_beachclean.scss';
+
+
+
