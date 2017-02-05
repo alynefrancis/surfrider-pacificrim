@@ -118,3 +118,8 @@ module.exports = function(grunt) {
 // 'concat', 'jshint', 'uglify', 
 
 
+// for json file
+ // "grunt-browser-sync": "^2.1.3",
+// "grunt-contrib-concat": "^0.5.1",
+// "grunt-contrib-jshint": "^0.11.2",
+// "grunt-contrib-uglify": "^0.9.1",

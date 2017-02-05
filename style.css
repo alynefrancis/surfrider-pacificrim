@@ -555,7 +555,7 @@ All Campaigns and Program Styles
       height: 500px; } }
   @media screen and (max-width: 1320px) {
     .camprog {
-      height: 450px; } }
+      height: 440px; } }
   @media all and (max-width: 768px) {
     .camprog {
       min-height: 470px; } }
@@ -662,11 +662,13 @@ Single Campaigns/Programs
   margin: 0 auto; }
 
 .gallery-image {
-  padding-bottom: 20px;
   text-align: center; }
   .gallery-image .gallery-image img {
     width: 100%;
     height: auto; }
+
+figure.gallery-image {
+  margin: 1em 0 1em 0; }
 
 .crew-member {
   margin-bottom: 20px; }
@@ -742,10 +744,15 @@ Single Campaigns/Programs
 
 @media screen and (max-width: 768px) {
   .trash-trend-item.small {
-    height: 70px; } }
+    height: 80px; } }
+.trash-trend-item.small h4 {
+  margin-bottom: 10px; }
 
 .single-beach-trend {
   margin-bottom: 30px;
   text-align: center; }
+  @media screen and (max-width: 400px) {
+    .single-beach-trend {
+      margin-bottom: 20px; } }
 
 /*# sourceMappingURL=style.css.map */

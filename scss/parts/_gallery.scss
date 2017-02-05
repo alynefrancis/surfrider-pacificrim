@@ -7,10 +7,15 @@
 
 
 .gallery-image {
-	padding-bottom: 20px;
+	// padding-bottom: 20px;
 	text-align: center;
 		.gallery-image img {
 			width: 100%;
 			height: auto;	
 		}
+}
+
+//there was default styling on figure that added extra margin on bottom. was 2em removed that
+figure.gallery-image {
+	margin: 1em 0 1em 0;
 }

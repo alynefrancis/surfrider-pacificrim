@@ -9,7 +9,7 @@ get_header(); ?>
 
 while ( have_posts() ) : the_post();
 
-	get_template_part('template-parts/page', 'hero');
+	get_template_part('template-parts/post', 'hero');
 
 
 endwhile; ?>
@@ -20,9 +20,9 @@ endwhile; ?>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<?php if (get_previous_post_link()) : previous_post_link('%link', '<span class="pagination-text">Prev Program</span>'); endif; ?>
+					<?php if (get_previous_post_link()) : previous_post_link('%link', '<span class="pagination-text">Prev Event</span>'); endif; ?>
 					<span class="paginate-home bright-blue-color share-trigger">Share</span>
-					<?php if (get_next_post_link()) : next_post_link('%link','<span class="pagination-text">Next Program</span>'); endif; ?>
+					<?php if (get_next_post_link()) : next_post_link('%link','<span class="pagination-text">Next Event</span>'); endif; ?>
 					<div class="share-icons">
 						<a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo the_permalink(); ?>" target="_blank" class="ss-icon ss-social-regular share-icon share-facebook">Facebook</a>
 						<a href="https://twitter.com/home?status=<?php echo the_permalink(); ?>" target="_blank" class="ss-icon ss-social-regular share-icon share-twitter">Twitter</a>
@@ -52,7 +52,7 @@ endwhile; ?>
 		</main>
 	</article>
 
-	<section>
+<section>
 
 		<!--loop over all images available for post -->
 		 	<!--Images are part of an ACF Gallery - see documentation 
@@ -60,7 +60,7 @@ endwhile; ?>
 
 		 	<?php if( get_field('image') ): ?>
 
-				<h2 class ="blue-title">The Program in Action</h2>
+				<h2 class ="blue-title">Check out our photos from that day!</h2>
 
 			<?php endif; ?>
 
@@ -85,53 +85,8 @@ endwhile; ?>
 		  		
 		 </div> 
 	
-
 	</section>
 
-	<?php wp_reset_postdata(); ?>
-
-	<?php if( get_field('camprog_video') ): ?>
-
-	<section class="panel white-color campaign-video">
-	 	<div class="container">
-	    	<div class="row padding-bottom">
-	          	<div class="col-md-12">
-	              	<h2>Check out our Campaign Video</h2>
-	          	</div>
-	      	</div>
-	   		<div class="row">
-
-		      	<div class="col-xs-12 ">
-		           <a class="video-modal video-preview with-bottom-script-text" data-effect="mfp-zoom-in" href="<?php the_field('camprog_video'); ?>">
-		              <span class="play-btn">Play</span>
-		              <script src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
-		              <iframe id="player1" src="" width="100%" height="auto" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-		          </a>
-		      	</div>
-	   	 	</div>
-	  	</div>
-	</section>
-
-	<?php else : ?>
-
-	<section class="panel white-color campaign-video">
-	    <div class="container">
-	        <div class="row padding-bottom">
-	            <div class="col-md-12">
-	                  <h2>Check out our Campaign Video</h2>
-	            </div>
-	        </div>
-
-	        <div class="row">
-	            <div class="col-sm-12  col-xs-12 ">
-	                   <p>COMING SOON!</p>
-	            </div>
-	        </div>
-	    </div>
-	</section>
-
-	<?php endif; ?>
-
-<?php endwhile; endif;  ?>
-
+	<?php endwhile; endif;  ?>
+		
 <?php get_footer(); ?>

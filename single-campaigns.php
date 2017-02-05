@@ -33,56 +33,60 @@ endwhile; ?>
 		</div>
 	</div>
 
-	<article id="first-section" class="blog-post long-form-text">
-		<section id="main" class="container" role="main">
-			<div class="row entry-content">
-				<div class="col-xs-12 col-xs-offset-0 col-md-10 col-md-offset-1">
-					<?php the_content(); ?>
+	<article id="primary" class="blog-post long-form-text">
+		<main id="main" class="container" role="main">
+			<div class="row">
+				<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0">
+					<div class="entry-content">
+
+						<?php
+							/* translators: %s: Name of current post */
+							the_content( sprintf(
+								__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ),
+								get_the_title()
+							) );
+						?>
+					</div><!-- .entry-content -->
 				</div>
 			</div>
-		</section>
-	</article><!-- .content-area -->
+		</main>
+	</article>
 
 	<section>
 
+			<!--loop over all images available for post -->
+			 	<!--Images are part of an ACF Gallery - see documentation 
+			 	http://www.advancedcustomfields.com/resources/gallery/-->
+
+			 	<?php if( get_field('image') ): ?>
+
+					<h2 class ="blue-title">The Campaign in Action</h2>
+
+				<?php endif; ?>
+
+			 <div class="wide-container" itemscope itemtype="http://schema.org/ImageGallery">
+			  		<?php 
+			  		$images = get_field('image');
+				
+			  		if( $images ) : ?>		
+				        <?php foreach( $images as $image ) : 
+				        	
+				    	  ?>
+
+				            <figure class="col-md-4 col-sm-6 col-xs-12 gallery-image" data-catagory="" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+			                <a href="<?php echo $image['url']; ?>" itemprop="contentUrl" data-size="<?php echo $image['width'] . 'x' . $image['height']; ?>">
+			               		   	<img class="" src="<?php echo $image['sizes']['gallery-image']; ?>" itemprop="thumbnail" alt="<?php echo $image['alt']; ?>" />
+			                </a>
+			                <!-- <figcaption itemprop="caption description"><?php echo $image['caption']; ?></figcaption>  -->               
+			            	</figure>
+						        
+				   		<?php endforeach; ?>		    
+			  		<?php endif; ?>
+			  		
+			 </div> 
 		
 
-			<?php if( get_field('image') ): ?>
-
-				<h2 class ="blue-title">The Campaign in Action</h2>
-
-			<?php endif; ?>
-
-		<div class="wide-container ">
-		
-			<?php $images = get_field('image');
-
-			if( $images ): ?>
-
-			<div class="row">
-			  
-		        <?php foreach( $images as $image ): 
-		            $content = '<div class=" col-md-4 col-sm-6 col-xs-12 gallery-image">';
-		                $content .= '<a class="gallery_image" href="'. $image['url'] .'">';
-		                     $content .= '<img src="'. $image['sizes']['gallery-image'] .'" alt="'. $image['alt'] .'" />';
-		                $content .= '</a>';
-		            $content .= '</div>';
-		            if ( function_exists('slb_activate') ){
-		    			$content = slb_activate($content);
-		    		}
-		    
-					echo $content;?>
-		        <?php endforeach; ?>
-
-			</div>
-
-			<?php endif; ?>
-
-		</div>
-
-	
-
-	</section>
+		</section>
 
 	<?php wp_reset_postdata(); ?>
 
