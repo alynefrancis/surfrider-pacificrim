@@ -33,7 +33,7 @@
 
 <?php elseif (get_post_thumbnail_id() != "" && $attachment->post_title === ""): ?>
 
-	<div class="hero white-color with-just-title" style="background-image:url(<?php the_post_thumbnail_url('large'); ?>);">
+	<div class="hero white-color with-just-title" style="background-image:url(<?php the_post_thumbnail_url(); ?>);">
 		<div class="container">
 			<div class="row bottom-section">
 				<div class="col-xs-12 page-title pull-right">

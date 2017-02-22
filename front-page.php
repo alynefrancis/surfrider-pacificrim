@@ -12,23 +12,18 @@ get_header();  ?>
     <?php show_hero('three');?>
 </div>
 
-<!-- adding images for social media shares and then using display:none.  -->
-<!-- Currently the first images to appear on the page are the beach clean posters  -->
-<!-- could have used a repeater but didn't -->
-
-<div class="social-media-images hide">
-<?php if( get_field('social_media_image_1') ): ?>
-    <img src="<?php the_field('social_media_image_1'); ?>" />
-<?php endif; ?>
-
-<?php if( get_field('social_media_image_2') ): ?>
-    <img src="<?php the_field('social_media_image_2'); ?>" />
-<?php endif; ?>
-
-<?php if( get_field('social_media_image_3') ): ?>
-    <img src="<?php the_field('social_media_image_3'); ?>" />
-<?php endif; ?>
-</div>
+<!-- Adding a post-thumbnail attribute for apps like Facebook to hook into for showing page thumbnail  -->
+<!-- added bootstrap class .hide to hide it-->
+<div class="hero white-color with-just-title hide" style="background-image:url(<?php the_post_thumbnail_url(); ?>);">
+        <div class="container">
+            <div class="row bottom-section">
+                <div class="col-xs-12 page-title pull-right">
+                    <?php the_title('<h1>', '</h1>'); ?>
+                </div>
+            </div>
+        </div>
+        <p class = "photo-credit-hero"><?php echo $attachment->post_content; ?></p>
+    </div>
 
 <!-- ****** Content from Page ******  -->
 
